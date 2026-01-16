@@ -42,6 +42,7 @@ ITM 2 13,2
 EXT 13,13 0 12,0
 EXT 7,10 1 7,10
 EXT 8,10 1 8,10
+EXT 3,3 2 3,14
 PAL 0
 TUNE 2
 
@@ -85,8 +86,9 @@ ROOM 2
 0,16,a,p,a,a,a,a,a,a,a,a,a,a,a,a
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME Bathroom
-END 4 2,2
+EXT 3,14 0 3,3
 PAL 0
+TUNE 4
 
 TIL 10
 00000000
@@ -822,10 +824,6 @@ NAME key dialog
 DLG 3
 Dude just do your job in the kitchen and shut up man.
 NAME Bob dialog
-
-DLG 4
-The end
-NAME ending 1
 
 VAR a
 42
