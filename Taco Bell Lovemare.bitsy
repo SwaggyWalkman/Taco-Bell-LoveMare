@@ -49,7 +49,7 @@ EXT 8,10 1 8,10
 EXT 3,3 2 3,14
 EXT 12,0 5 12,14
 PAL 0
-TUNE 2
+TUNE 5
 
 ROOM 1
 0,2q,2k,2m,2o,2p,2m,2l,2b,2b,2b,2e,2d,25,0,0
@@ -69,11 +69,11 @@ w,w,12,12,12,w,w,w,12,12,12,w,12,12,w,12
 11,10,y,y,y,0,z,10,y,y,y,z,y,y,11,y
 y,y,y,y,y,y,y,y,y,y,y,y,y,y,y,y
 NAME Small Town
-ITM 3 4,7
 EXT 7,10 0 7,10
 EXT 8,10 0 8,10
 EXT 6,5 5 3,6
 PAL 1
+TUNE 2
 
 ROOM 2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -109,9 +109,9 @@ ROOM 3
 0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
 0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
 0,d,a,a,a,a,a,o,0,0,0,0,e,0,n,0
+0,e,3d,3e,3f,3g,3h,n,0,0,0,0,e,0,n,0
 0,e,0,0,0,0,0,n,0,0,0,0,e,0,n,0
-0,e,0,0,0,0,0,n,0,0,0,0,e,0,n,0
-a,1b,0,0,0,0,0,1g,a,a,a,a,1b,0,n,0
+a,1b,0,33,33,33,0,1g,a,a,a,a,1b,0,n,0
 1u,0,0,0,0,0,0,0,0,0,0,0,0,0,n,0
 a,a,a,a,a,a,a,a,a,a,a,a,a,a,17,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -164,6 +164,7 @@ NAME Kitchen
 EXT 12,14 0 12,0
 EXT 3,6 1 6,5
 PAL 0
+TUNE 5
 
 TIL 10
 00000000
@@ -1391,8 +1392,8 @@ TIL 3b
 00001011
 00000111
 00111111
-00111111
-00111111
+00001111
+00000111
 
 TIL 3c
 00000000
@@ -1401,8 +1402,62 @@ TIL 3c
 11010000
 11100000
 11111100
-11111100
-11111100
+11110000
+11100000
+
+TIL 3d
+10000000
+10110000
+11111111
+10000000
+10110001
+10110101
+11111111
+11000000
+WAL true
+
+TIL 3e
+00000000
+00001110
+11111111
+01000100
+01100100
+01100100
+11111111
+00000000
+WAL true
+
+TIL 3f
+00100000
+00101100
+11111111
+00000000
+11100110
+11100110
+11111111
+00000000
+WAL true
+
+TIL 3g
+01100010
+11111010
+11111111
+00000000
+01010101
+01010101
+11111111
+00000000
+WAL true
+
+TIL 3h
+00000001
+00000001
+11111111
+00000001
+01100001
+01100001
+11111111
+00000011
 
 SPR A
 00011000
@@ -1487,6 +1542,7 @@ SPR c
 00000010
 00000101
 00000101
+DLG l
 POS 2 13,2
 
 SPR d
@@ -1744,6 +1800,19 @@ NAME WOMEN BLOCK OFF
 DLG f
 POS 2 2,11
 
+SPR t
+00000000
+00000111
+00010011
+00001011
+00000111
+00111111
+00001111
+00000111
+NAME Toilet
+DLG m
+POS 2 13,4
+
 ITM 0
 00000000
 00000000
@@ -1768,26 +1837,6 @@ ITM 1
 NAME key
 DLG 2
 BLIP 2
-
-ITM 3
-11111111
-00111000
-01011100
-10011111
-10000001
-10011001
-01100110
-11111111
->
-11111111
-00000000
-00111000
-01111100
-11011111
-10000001
-01111110
-11111111
-NAME My Car
 
 ITM 4
 00000000
@@ -1889,8 +1938,26 @@ ITM c
 NAME Lighter
 DLG k
 
+ITM d
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Fireworks
+
 DLG 0
-I'm a cat
+"""
+{
+  - {item "8"} >= 1 ?
+    Meow!!(Thanks dude! you hooked me up!!{item "8" {{item "8"} - 1}}{blip "1"}{item "b" {{item "b"} + 1}}
+  - else ?
+    Meow(Hey bro, can I get some {rbw}Chicken?{/rbw})
+}
+"""
 NAME cat dialog
 
 DLG 1
@@ -1902,7 +1969,14 @@ A key! {wvy}What does it open?{wvy}
 NAME key dialog
 
 DLG 3
-{clr 1}Dude what do you want?{/clr}{pg}{clr 1}Just get in the kitchen and make our customers orders..{/clr}
+"""
+{
+  - {item "b"} >= 4 ?
+    {clr 1}Wow, I've never seen you do a good job before. . .{/clr}{pg}{clr 1}I guess you can go home then. . .{/clr}{pg}{clr 2}And so I went home.{/clr}{pg}{clr 2}And made it up with my Cthulu ex who found out I used Grindr.{/clr}(ENDING 1 THE GOOD ENDING){end}
+  - else ?
+    {clr 1}Dude what do you want?{/clr}{pg}{clr 1}Our customers are STARVED BEASTS!! Get in the kitchen and make their orders!{/clr}{pg}{clr 1}Talk to me when the rush is over. Maybe I'll let you go home.{/clr}
+}
+"""
 NAME Bob dialog
 
 DLG 4
@@ -1915,7 +1989,14 @@ DLG 4
 NAME Poor Dude dialog
 
 DLG 5
-Got 20 bucks?
+"""
+{
+  - {item "4"} >= 1 ?
+    Oh wow you got my back? I can finally eat!{pg}Take these {rbw}Fireworks{/rbw}, kids in 5th avenue been shootin em, stole a few to sell.{blip "5"}{item "d" {{item "d"} + 1}}{pg}{clr 2}What do I even use Fireworks for?{/clr}{item "4" {{item "4"} - 1}}
+  - else ?
+    Yo. . .got 20 bucks?
+}
+"""
 NAME Homeless Man dialog
 
 DLG 6
@@ -1940,56 +2021,56 @@ DLG 9
 """
 {
   - {item "5"} >= 1 ?
-    I place down the Tortilla, {
+    {clr 2}I place down the Tortilla, {/clr}{
       - {item "8"} >= 1 ?
-        adding the Chicken, {
+        {clr 2}adding the Chicken, {/clr}{
           - {item "6"} >= 1 ?
-            Placing cheese on top, we have a {rbw}Chicken Taco!!{/rbw}
+            {clr 2}Placing cheese on top, we have a{/clr} {rbw}Chicken Taco!!{/rbw}
           - else ?
-            Wait, something's missing, we need Cheese
-        }{item "5" {{item "5"} - 1}}{item "8" {{item "8"} - 1}}{item "6" {{item "6"} - 1}}{item "9" {{item "9"} + 1}}
+            {clr 2}Wait, something's missing, we need Cheese{/clr}
+        }{item "5" {{item "5"} - 1}}{item "8" {{item "8"} - 1}}{item "6" {{item "6"} - 1}}{item "9" {{item "9"} + 1}}{blip "5"}
       - else ?
-        Wait, something's missing, we need Chicken
+        {clr 2}Wait, something's missing, we need Chicken{/clr}
     }
   - else ?
-    Wait, something's missing, we need a Tortilla
+    {clr 2}Wait, something's missing, we need a Tortilla{/clr}
 }
 """
 NAME Chicken Taco Station dialog
 
 DLG a
-I pull a Tortilla from the bin.{item "5" {{item "5"} + 1}}
+{clr 2}I pull a Tortilla from the bin.{/clr}{item "5" {{item "5"} + 1}}{blip "5"}
 NAME Tortilla dialog
 
 DLG b
-I grate some cheese and put it in my pocket.{item "6" {{item "6"} + 1}}
+{clr 2}I grate some cheese and put it in my pocket.{/clr}{item "6" {{item "6"} + 1}}{blip "5"}
 NAME Cheese Station dialog
 
 DLG c
-I cooked up some beef on the grill, placing it into a bin.{item "7" {{item "7"} + 1}}
+{clr 2}I cooked up some beef on the grill, placing it into a bin.{/clr}{item "7" {{item "7"} + 1}}{blip "5"}
 NAME Beef Station dialog
 
 DLG d
-I grilled some chicken on the grill, placing it into a bin.{item "8" {{item "8"} + 1}}
+{clr 2}I grilled some chicken on the grill, placing it into a bin.{/clr}{item "8" {{item "8"} + 1}}{blip "5"}
 NAME Chicken Station dialog
 
 DLG e
 """
 {
   - {item "5"} >= 1 ?
-    I place down the Tortilla, {
+    {clr 2}I place down the Tortilla, {/clr}{
       - {item "7"} >= 1 ?
-        adding the Beef, {
+        {clr 2}adding the Beef, {/clr}{
           - {item "6"} >= 1 ?
-            Placing cheese on top, we have a {rbw}Beef Taco!!{/rbw}
+            {clr 2}Placing cheese on top, we have a{/clr} {rbw}Beef Taco!!{/rbw}
           - else ?
-            Wait, something's missing, we need Cheese
-        }{item "5" {{item "5"} - 1}}{item "7" {{item "7"} - 1}}{item "6" {{item "6"} - 1}}{item "a" {{item "a"} + 1}}
+            {clr 2}Wait, something's missing, we need Cheese{/clr}
+        }{item "5" {{item "5"} - 1}}{item "7" {{item "7"} - 1}}{item "6" {{item "6"} - 1}}{item "a" {{item "a"} + 1}}{blip "5"}
       - else ?
-        Wait, something's missing, we need Beef
+        {clr 2}Wait, something's missing, we need Beef{/clr}
     }
   - else ?
-    Wait, something's missing, we need a Tortilla
+    {clr 2}Wait, something's missing, we need a Tortilla{/clr}
 }
 
 """
@@ -2005,34 +2086,34 @@ DLG g
 DLG h
 """
 {
-  - {item "9"} == 1 ?
-    {clr 2}{shk}Oh thank god I was starving!! Thank you!{/shk}{/clr}{item "b" {{item "b"} + 1}}{item "9" {{item "9"} - 1}}
+  - {item "9"} >= 1 ?
+    {shk}Oh thank god I was starving!! Thank you!{/shk}{item "b" {{item "b"} + 1}}{item "9" {{item "9"} - 1}}{blip "1"}
   - else ?
-    {clr 2}{shk}Dude I've been waiting 20 minutes for basic fast food.{/shk}{/clr}
-}{pg}{shk}{clr 2}Where's my{/clr} {rbw}Chicken Taco?{/rbw}{/shk}
+    {shk}Dude I've been waiting 20 minutes for basic fast food.{/shk}{pg}{shk}Where's my {rbw}Chicken Taco?{/rbw}{/shk}
+}
 """
 NAME Customer 1 dialog
 
 DLG i
 """
 {
-  - {item "a"} == 1 ?
-    {wvy}T-Thank you. . .I appreciate it. . {/wvy}{item "b" {{item "b"} + 1}}{item "a" {{item "a"} - 1}}
+  - {item "a"} >= 1 ?
+    {wvy}T-Thank you. . .I appreciate it. . {/wvy}{item "b" {{item "b"} + 1}}{item "a" {{item "a"} - 1}}{blip "4"}
   - else ?
-    {wvy}E-Excuse me mister. . .im so hungry. . .{/wvy}
-}{pg}{wvy}When's my {/wvy}{rbw}Beef Taco?{/rbw} {wvy}gonna be ready..?{/wvy}
+    {wvy}E-Excuse me mister. . .im so hungry. . .{/wvy}{pg}{wvy}When's my {/wvy}{rbw}Beef Taco?{/rbw} {wvy}gonna be ready..?{/wvy}
+}
 """
 NAME Customer 2 dialog
 
 DLG j
 """
 {
-  - {item "a"} == 1 ?
+  - {item "a"} >= 1 ?
     {
-      - {item "9"} == 1 ?
-        {clr 2}Preciate it {wvy}gorgeous{/wvy}, here's a lil gift for it.{/clr}{item "b" {{item "b"} + 1}}{item "9" {{item "9"} - 1}}{item "a" {{item "a"} - 1}}{item "c" {{item "c"} + 1}}
+      - {item "9"} >= 1 ?
+        Preciate it {wvy}gorgeous{/wvy}, here's a lil gift for it.{item "b" {{item "b"} + 1}}{item "9" {{item "9"} - 1}}{item "a" {{item "a"} - 1}}{item "c" {{item "c"} + 1}}{blip "4"}{pg}{clr 2}The hell am I gonna use a {rbw}lighter{/rbw} for? Smoking?{/clr}
       - else ?
-        {clr 2}Hey {wvy}hotshot{/wvy}, when am I getting my{/clr} {rbw}Chicken and Beef Taco?{/rbw}
+        Hey {wvy}hotshot{/wvy}, when am I getting my {rbw}Chicken and Beef Taco?{/rbw}
     }
   - else ?
     Hey {wvy}hotshot{/wvy}, when am I getting my {rbw}Chicken and Beef Taco?{/rbw}
@@ -2043,6 +2124,26 @@ NAME Customer 3 dialog
 DLG k
 She handed me a lighter, what am I gonna do smoke?
 NAME Lighter dialog
+
+DLG l
+Dude I'm ripping a new one, please get away, I don't need anyone hearing this.{blip "6"}{blip "6"}{blip "6"}
+NAME sprite c dialog
+
+DLG m
+"""
+{
+  - {item "c"} >= 1 ?
+    {clr 2}Maybe I can light this up like a Christmas tree. . .{/clr}{
+      - {item "d"} == 1 ?
+        {pg}{clr 2}Craving opportunity, I place the fireworks into the toilet.{/clr}{pg}{clr 2}Upon explosion, I finally felt secure.{/clr}{pg}{clr 2}In prison.{/clr}   (ENDING 2, Blowing Ass){end}
+      - else ?
+
+    }
+  - else ?
+    {clr 2}This toilet never works, I'm sick of fixing it.{/clr}
+}
+"""
+NAME Toilet
 
 VAR a
 42
@@ -2146,6 +2247,22 @@ NAME Bathroom Hell
 TMP SLW
 SQR P8 P8
 
+TUNE 5
+2D,0,A,0,C,E,0,0,C,C,C,C,C,C,C,C
+4D2,0,0,0,F2,F2,F2,3F2,0,0,2F2,0,4D2,0,0,0
+>
+2D,0,A,0,C,E,0,0,3E,0,0,2E,0,F,2G,0
+4D2,0,0,0,4F2,0,0,0,8G2,0,0,0,0,0,0,0
+>
+A,F,D,D,F,0,A,0,C,C,0,E,E,G,A,0
+A2,F2,D2,D2,4D2,0,0,0,4C2,0,0,0,4D2,0,0,0
+>
+0,C,C,C,E,0,A,0,2G,0,2C5,0,A#,2A,0,0
+0,F2,D2,F2,4A2,0,0,0,C3,2C3,0,C3,4A2,0,0,0
+NAME Chill tunes in Taco Bell
+TMP MED
+SQR P2 P4
+
 BLIP 1
 E5,B5,B5
 NAME meow
@@ -2179,5 +2296,12 @@ F#2,B2,F#2
 NAME pick up 3
 ENV 115 88 5 170 139
 BEAT 32 0
+SQR P2
+
+BLIP 6
+E5,C2,C2
+NAME Assrip
+ENV 40 99 4 480 138
+BEAT 189 146
 SQR P2
 
