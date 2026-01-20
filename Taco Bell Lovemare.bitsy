@@ -1,4 +1,8 @@
+"""
 Taco Bell Lovemare
+
+{clr 2}So I used to date Cthulu, yeah it's not really cute.{/clr}{pg}{clr 2}We broke up last week in fact, I told her it couldn't work.{/clr}{pg}{clr 2}Maybe it's foolish of me, however I opened up a Grindr account a week later.{/clr}{pg}{clr 2}Now I got death threats on my phone for when my shift ends at Taco Bell.{/clr}{pg}{clr 2}What am I going to do. .?{/clr}{exit "0" 9 2}
+"""
 
 # BITSY VERSION 8.14
 
@@ -43,7 +47,6 @@ w,w,12,12,12,w,w,w,12,12,12,w,12,12,w,12
 11,10,y,y,y,0,z,10,y,y,y,z,y,y,11,y
 y,y,y,y,y,y,y,y,y,y,y,y,y,y,y,y
 NAME Live Mas Dining Room
-EXT 13,13 0 12,0
 EXT 7,10 1 7,10
 EXT 8,10 1 8,10
 EXT 3,3 2 3,14
@@ -165,6 +168,27 @@ EXT 12,14 0 12,0
 EXT 3,6 1 6,5
 PAL 0
 TUNE 5
+
+ROOM 6
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,d,a,a,a,a,a,a,a,a,14,0,0,0
+0,0,0,e,0,0,0,0,0,0,0,1r,n,0,0,0
+0,0,0,16,a,a,a,a,a,a,a,a,17,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Intro
+EXT 11,7 0 10,2
+PAL 0
 
 TIL 10
 00000000
@@ -745,6 +769,7 @@ TIL w
 00000000
 00000000
 NAME Sidewalk
+WAL false
 
 TIL x
 00000000
@@ -792,6 +817,7 @@ TIL 1a
 10111000
 01011000
 NAME Back Corner Wall R
+WAL true
 
 TIL 1b
 10011010
@@ -964,6 +990,7 @@ TIL 1p
 10101010
 01010101
 10101010
+WAL true
 
 TIL 1q
 00000000
@@ -1458,6 +1485,7 @@ TIL 3h
 01100001
 11111111
 00000011
+WAL true
 
 SPR A
 00011000
@@ -1477,7 +1505,7 @@ SPR A
 00011000
 00100100
 00100100
-POS 0 9,2
+POS 6 4,7
 
 SPR a
 00000000
@@ -2001,6 +2029,7 @@ NAME Homeless Man dialog
 
 DLG 6
  
+NAME Intro Dialogue
 
 DLG 7
 """
