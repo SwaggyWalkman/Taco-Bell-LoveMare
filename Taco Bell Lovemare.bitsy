@@ -15,9 +15,9 @@ PAL 0
 NAME blueprint
 
 PAL 1
-245,244,254
-46,64,100
-150,0,255
+243,245,254
+0,0,0
+255,2,251
 NAME Live Mas Block
 
 PAL 2
@@ -78,12 +78,12 @@ PAL 1
 ROOM 2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,d,a,a,a,a,a,1d,1e,a,a,a,a,a,1d,0
-0,e,0,0,0,0,0,n,e,0,0,0,0,0,n,0
-0,e,0,0,0,0,0,n,e,0,0,0,0,0,n,0
-0,e,0,0,0,0,0,n,e,0,0,0,0,0,n,0
-0,e,0,0,0,0,0,n,e,0,0,0,0,0,n,0
-0,e,0,0,0,0,0,n,e,0,0,0,0,0,n,0
-0,e,0,0,0,0,0,n,e,0,0,0,0,0,n,0
+0,e,3c,3a,0,38,3b,n,e,39,0,0,38,0,n,0
+0,e,37,0,0,0,37,n,e,37,0,0,0,37,n,0
+0,e,3c,3a,0,38,3b,n,e,39,0,0,38,3b,n,0
+0,e,37,0,0,0,37,n,e,37,0,0,0,37,n,0
+0,e,3c,3a,0,38,3b,n,e,39,0,0,38,3b,n,0
+0,e,37,0,0,0,37,n,e,37,0,0,0,37,n,0
 0,e,0,0,0,0,0,n,e,0,0,0,0,0,n,0
 0,e,0,1q,1p,1p,1p,17,16,1i,0,1q,1p,1p,n,0
 0,e,0,1l,1m,1m,1m,1n,1k,1j,0,1o,1m,1m,1n,0
@@ -466,6 +466,37 @@ TIL 36
 00000000
 00000000
 00000000
+
+TIL 37
+11111111
+11111111
+10000001
+10000001
+10000001
+10000001
+11111111
+11111111
+WAL true
+
+TIL 38
+00000001
+00000001
+00000001
+00000001
+00000001
+00000011
+00000011
+00000001
+
+TIL 39
+00000000
+00000000
+11000000
+11000000
+11000000
+11000000
+11110000
+11110000
 
 TIL a
 01100110
@@ -1343,6 +1374,36 @@ TIL 2z
 01000101
 WAL true
 
+TIL 3a
+10000000
+10000000
+10000000
+10000000
+10000000
+11000000
+11000000
+10000000
+
+TIL 3b
+00000000
+00000111
+00010011
+00001011
+00000111
+00111111
+00111111
+00111111
+
+TIL 3c
+00000000
+11100000
+11001000
+11010000
+11100000
+11111100
+11111100
+11111100
+
 SPR A
 00011000
 00011100
@@ -1372,8 +1433,18 @@ SPR a
 01111100
 00111100
 00100100
+>
+00000000
+00000000
+00000000
+01010001
+01110001
+01110010
+01111100
+00111100
 NAME cat
 DLG 0
+POS 0 14,9
 BLIP 1
 
 SPR b
@@ -1558,6 +1629,7 @@ SPR l
 00111100
 00000000
 NAME Beef Taco Station
+DLG e
 POS 5 7,7
 
 SPR m
@@ -1582,6 +1654,95 @@ SPR n
 00000000
 00000000
 00000000
+
+SPR o
+00000110
+00000110
+00001000
+00011110
+00010000
+00010000
+00010000
+00010000
+>
+00000000
+00000110
+00001110
+00011111
+00010000
+00010000
+00010000
+00010000
+NAME Customer 1
+DLG h
+POS 0 1,7
+
+SPR p
+00000000
+00000110
+00000110
+00001010
+00010100
+00001000
+00000100
+00000100
+>
+00000000
+00000000
+00000110
+00000110
+00001010
+00010100
+00001000
+00000100
+NAME Customer 2
+DLG i
+POS 0 1,9
+
+SPR q
+00011000
+01111110
+00000000
+00111100
+01011010
+00111100
+00011000
+00010000
+>
+00000000
+00011000
+01111110
+00000000
+01111110
+00111100
+00011000
+00001000
+NAME Customer 3
+DLG j
+POS 0 12,6
+
+SPR r
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+SPR s
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME WOMEN BLOCK OFF
+DLG f
+POS 2 2,11
 
 ITM 0
 00000000
@@ -1694,6 +1855,40 @@ ITM 9
 00000000
 NAME Chicken Taco
 
+ITM a
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Beef Taco
+
+ITM b
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Good Karma
+
+ITM c
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Lighter
+DLG k
+
 DLG 0
 I'm a cat
 NAME cat dialog
@@ -1728,11 +1923,11 @@ DLG 6
 
 DLG 7
 """
-{wvy}Ahh{/wvy} the Register, it sucks bob doesn't trust me using it.     Not since I took money to scalp some Pokemon cards.{
+{clr 2}{wvy}Ahh{/wvy} the Register, it sucks bob doesn't trust me using it.     Not since I took money to scalp some Pokemon cards.{/clr}{
   - {item "1"} == 1 ?
-              Using the key I got, I pulled the most I've ever made.            {rbw}20 Bucks{/rbw}{item "4" {{item "4"} + 1}}{item "1" {{item "1"} - 1}}
+             {clr 2} Using the key I got, I pulled the most I've ever made.            {rbw}20 Bucks{/rbw}{/clr}{item "4" {{item "4"} + 1}}{item "1" {{item "1"} - 1}}
   - else ?
-             Maybe I could. . .
+          {clr 2}   Maybe I could. . .{/clr}
 }
 """
 NAME Register dialog
@@ -1777,6 +1972,77 @@ NAME Beef Station dialog
 DLG d
 I grilled some chicken on the grill, placing it into a bin.{item "8" {{item "8"} + 1}}
 NAME Chicken Station dialog
+
+DLG e
+"""
+{
+  - {item "5"} >= 1 ?
+    I place down the Tortilla, {
+      - {item "7"} >= 1 ?
+        adding the Beef, {
+          - {item "6"} >= 1 ?
+            Placing cheese on top, we have a {rbw}Beef Taco!!{/rbw}
+          - else ?
+            Wait, something's missing, we need Cheese
+        }{item "5" {{item "5"} - 1}}{item "7" {{item "7"} - 1}}{item "6" {{item "6"} - 1}}{item "a" {{item "a"} + 1}}
+      - else ?
+        Wait, something's missing, we need Beef
+    }
+  - else ?
+    Wait, something's missing, we need a Tortilla
+}
+
+"""
+NAME Beef Taco Station dialog
+
+DLG f
+{clr 2}I can't enter the women's room, I'm not a creep!{/clr}
+NAME WOMEN BLOCK OFF dialog
+
+DLG g
+ 
+
+DLG h
+"""
+{
+  - {item "9"} == 1 ?
+    {clr 2}{shk}Oh thank god I was starving!! Thank you!{/shk}{/clr}{item "b" {{item "b"} + 1}}{item "9" {{item "9"} - 1}}
+  - else ?
+    {clr 2}{shk}Dude I've been waiting 20 minutes for basic fast food.{/shk}{/clr}
+}{pg}{shk}{clr 2}Where's my{/clr} {rbw}Chicken Taco?{/rbw}{/shk}
+"""
+NAME Customer 1 dialog
+
+DLG i
+"""
+{
+  - {item "a"} == 1 ?
+    {wvy}T-Thank you. . .I appreciate it. . {/wvy}{item "b" {{item "b"} + 1}}{item "a" {{item "a"} - 1}}
+  - else ?
+    {wvy}E-Excuse me mister. . .im so hungry. . .{/wvy}
+}{pg}{wvy}When's my {/wvy}{rbw}Beef Taco?{/rbw} {wvy}gonna be ready..?{/wvy}
+"""
+NAME Customer 2 dialog
+
+DLG j
+"""
+{
+  - {item "a"} == 1 ?
+    {
+      - {item "9"} == 1 ?
+        {clr 2}Preciate it {wvy}gorgeous{/wvy}, here's a lil gift for it.{/clr}{item "b" {{item "b"} + 1}}{item "9" {{item "9"} - 1}}{item "a" {{item "a"} - 1}}{item "c" {{item "c"} + 1}}
+      - else ?
+        {clr 2}Hey {wvy}hotshot{/wvy}, when am I getting my{/clr} {rbw}Chicken and Beef Taco?{/rbw}
+    }
+  - else ?
+    Hey {wvy}hotshot{/wvy}, when am I getting my {rbw}Chicken and Beef Taco?{/rbw}
+}
+"""
+NAME Customer 3 dialog
+
+DLG k
+She handed me a lighter, what am I gonna do smoke?
+NAME Lighter dialog
 
 VAR a
 42
