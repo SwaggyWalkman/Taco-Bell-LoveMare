@@ -1,7 +1,7 @@
 """
 Taco Bell Lovemare
 
-{clr 2}So I used to date Cthulu, yeah it's not really cute.{/clr}{pg}{clr 2}We broke up last week in fact, I told her it couldn't work.{/clr}{pg}{clr 2}Maybe it's foolish of me, however I opened up a Grindr account a week later.{/clr}{pg}{clr 2}Now I got death threats on my phone for when my shift ends at Taco Bell.{/clr}{pg}{clr 2}What am I going to do. .?{/clr}{exit "0" 9 2}
+{clr 2}So I used to date Cthulu, yeah it's not really cute.{/clr}{pg}{clr 2}We broke up last week. I told her it couldn't work.{/clr}{pg}{clr 2}Maybe it's foolish of me, but I opened up a Grindr account a week later.{/clr}{pg}{clr 2}Now I'm getting death threats on my phone for when my shift ends.{/clr}{pg}{clr 2}What am I gonna do. .?{/clr}{exit "0" 9 2}
 """
 
 # BITSY VERSION 8.14
@@ -28,6 +28,11 @@ PAL 2
 91,0,255
 0,135,255
 255,189,0
+
+PAL 3
+255,2,31
+255,255,255
+0,0,0
 
 ROOM 0
 d,a,a,a,a,a,a,g,f,j,a,a,p,a,a,o
@@ -102,16 +107,16 @@ PAL 0
 TUNE 4
 
 ROOM 3
-0,0,0,0,0,0,0,0,0,0,0,0,0,1s,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,d,p,o,0
-0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
-0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
-0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
-0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
-0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
-0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
-0,0,0,0,0,0,0,0,0,0,0,0,e,0,n,0
-0,d,a,a,a,a,a,o,0,0,0,0,e,0,n,0
+0,0,0,0,36,23,36,0,0,0,0,0,0,1s,0,0
+0,0,0,0,36,0,36,0,0,0,0,0,d,p,o,0
+0,0,0,0,36,0,36,0,0,0,0,0,e,0,n,0
+0,0,0,0,36,0,36,0,0,0,0,0,e,0,n,0
+0,0,0,0,36,0,36,0,0,0,0,0,e,0,n,0
+0,0,0,0,36,0,36,0,0,0,0,0,e,0,n,0
+0,0,0,0,36,0,36,0,0,0,0,0,e,0,n,0
+0,0,0,0,36,0,36,0,0,0,0,0,e,0,n,0
+0,0,0,0,36,0,36,0,0,0,0,0,e,0,n,0
+0,d,a,a,a,3o,a,o,0,0,0,0,e,0,n,0
 0,e,3d,3e,3f,3g,3h,n,0,0,0,0,e,0,n,0
 0,e,0,0,0,0,0,n,0,0,0,0,e,0,n,0
 a,1b,0,33,33,33,0,1g,a,a,a,a,1b,0,n,0
@@ -121,6 +126,7 @@ a,a,a,a,a,a,a,a,a,a,a,a,a,a,17,0
 NAME The Stock Closet
 EXT 0,13 2 15,13
 EXT 13,1 4 5,7
+EXT 5,0 8 7,13
 PAL 0
 TUNE 4
 
@@ -176,9 +182,6 @@ ROOM 6
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,d,a,a,a,a,a,a,a,a,14,0,0,0
-0,0,0,e,0,0,0,0,0,0,0,1r,n,0,0,0
-0,0,0,16,a,a,a,a,a,a,a,a,17,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -186,9 +189,53 @@ ROOM 6
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME Intro
-EXT 11,7 0 10,2
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Gas Station
 PAL 0
+
+ROOM 7
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Your Home
+PAL 0
+
+ROOM 8
+3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i
+3i,3i,0,0,3i,3i,3i,3i,3i,3i,3i,0,0,3i,3i,3i
+3i,0,0,0,0,0,0,0,0,0,0,0,0,0,3i,3i
+3i,0,0,0,0,0,0,0,0,0,0,0,0,0,3i,3i
+3i,0,0,0,0,0,0,0,0,0,0,0,0,0,3i,3i
+3i,0,0,0,0,0,0,0,0,0,0,0,0,0,3i,3i
+3i,3i,3i,0,0,0,0,0,0,0,0,0,0,0,3i,3i
+3i,3i,3i,0,0,0,0,0,0,0,0,0,0,0,3i,3i
+3i,3i,3i,0,0,0,0,1y,0,0,0,0,0,3i,3i,3i
+3i,3i,0,0,0,0,0,0,1y,0,0,0,0,3i,3i,3i
+3i,3i,0,0,0,0,0,0,0,0,0,1w,0,3i,3i,3i
+3i,3i,0,0,0,0,0,0,0,0,0,0,0,3i,3i,3i
+3i,3i,0,0,0,0,d,a,a,o,0,1v,0,3i,3i,3i
+3i,0,0,0,0,0,e,0,0,n,1v,0,0,3i,3i,3i
+3i,0,0,0,0,1x,16,a,a,17,0,0,3i,3i,3i,3i
+3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i
+NAME You wont leave
+ITM e 7,13
+ITM f 8,13
+PAL 3
 
 TIL 10
 00000000
@@ -491,6 +538,7 @@ TIL 36
 00000000
 00000000
 00000000
+WAL true
 
 TIL 37
 11111111
@@ -1472,7 +1520,7 @@ TIL 3g
 01010101
 11111111
 00000000
-WAL true
+WAL false
 
 TIL 3h
 00000001
@@ -1484,6 +1532,78 @@ TIL 3h
 11111111
 00000011
 WAL true
+
+TIL 3i
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+
+TIL 3j
+11111000
+11111110
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+
+TIL 3k
+11111111
+11111111
+11111111
+11111110
+11111100
+11111000
+11111110
+11111111
+
+TIL 3l
+11111111
+11111111
+11111111
+11111111
+11111110
+01111100
+00111000
+00010000
+
+TIL 3m
+00111111
+00001111
+00000011
+00000001
+00000000
+00000000
+00000000
+00000000
+
+TIL 3n
+01100110
+10011001
+01100110
+10011001
+01100110
+10011001
+01100110
+10011001
+WAL true
+
+TIL 3o
+01100110
+10011001
+01100110
+10011001
+01100110
+10011001
+01100110
+10011001
+WAL false
 
 SPR A
 00011000
@@ -1503,7 +1623,7 @@ SPR A
 00011000
 00100100
 00100100
-POS 6 4,7
+POS 0 9,2
 
 SPR a
 00000000
@@ -1837,7 +1957,6 @@ SPR t
 00000111
 NAME Toilet
 DLG m
-POS 2 13,4
 
 ITM 0
 00000000
@@ -1962,7 +2081,6 @@ ITM c
 00000000
 00000000
 NAME Lighter
-DLG k
 
 ITM d
 00000000
@@ -1974,6 +2092,30 @@ ITM d
 00000000
 00000000
 NAME Fireworks
+
+ITM e
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME You wont leave
+DLG o
+
+ITM f
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME I miss you
+DLG p
 
 DLG 0
 """
@@ -1998,9 +2140,9 @@ DLG 3
 """
 {
   - {item "b"} >= 4 ?
-    {clr 1}Wow, I've never seen you do a good job before. . .{/clr}{pg}{clr 1}I guess you can go home then. . .{/clr}{pg}{clr 2}And so I went home.{/clr}{pg}{clr 2}And made it up with my Cthulu ex who found out I used Grindr.{/clr}(ENDING 1 THE GOOD ENDING){end}
+    {clr 1}Bob/Wow, I've never seen you do a good job before. . .{/clr}{pg}{clr 1}I guess you can go home then. . .{/clr}{pg}{clr 2}And so I went home.{/clr}{pg}{clr 2}And made it up with my Cthulu ex.{/clr}(ENDING 1 THE GOOD ENDING){end}
   - else ?
-    {clr 1}Dude what do you want?{/clr}{pg}{clr 1}Our customers are STARVED BEASTS!! Get in the kitchen and make their orders!{/clr}{pg}{clr 1}Talk to me when the rush is over. Maybe I'll let you go home.{/clr}
+    {clr 1}Bob/ Dude what do you want?{/clr}{pg}{clr 1}Our customers are STARVED BEASTS!! Get in the kitchen and make their orders!{/clr}{pg}{clr 1}Talk to me when the rush is over. Maybe I'll let you go home.{/clr}
 }
 """
 NAME Bob dialog
@@ -2018,16 +2160,12 @@ DLG 5
 """
 {
   - {item "4"} >= 1 ?
-    Oh wow you got my back? I can finally eat!{pg}Take these {rbw}Fireworks{/rbw}, kids in 5th avenue been shootin em, stole a few to sell.{blip "5"}{item "d" {{item "d"} + 1}}{pg}{clr 2}What do I even use Fireworks for?{/clr}{item "4" {{item "4"} - 1}}
+    Oh wow you got my back? I can finally eat!{pg}Take these {rbw}Firecrackers{/rbw}, kids in 5th avenue been shootin em, stole a few to sell.{blip "5"}{item "d" {{item "d"} + 1}}{pg}{clr 2}What do I even use Fireworks for?{/clr}{item "4" {{item "4"} - 1}}
   - else ?
     Yo. . .got 20 bucks?
 }
 """
 NAME Homeless Man dialog
-
-DLG 6
- 
-NAME Intro Dialogue
 
 DLG 7
 """
@@ -2041,7 +2179,14 @@ DLG 7
 NAME Register dialog
 
 DLG 8
-Can I get 2 number 9's? a number 9 large? A number 6 with extra dip?
+"""
+{cycle
+  - Can I get 2 number 9's? a number 9 large? A number 6 with extra dip?{pg}{clr 1}Bob/ I'm not paid to even entertain that.{/clr}
+  - Why's your employee running around like an idiot?{pg}{clr 1}Bob/ Because he's inept.{/clr}{pg}Then why keep him hired?{pg}{clr 1}Because his {shk}dad{/shk} owns the whole chain.{/clr}
+  - I think I broke the toilet in the bathroom. I'm sorry{pg}{clr 1}{shk}Bob/ . . .{/shk}{/clr}{pg}{clr 1}{shk}I'll make sure Kyle cleans it up.{/shk}{/clr}
+  - Uhhhhhh do you sell burgers. . .?{pg}{clr 1} Bob/ {shk}If we sold burgers then we'd be out of business. {/shk}{/clr}{pg}{clr 1}IF we somehow {wvy}sold burgers{/wvy}, I'm sure the FDA would {shk}FEINT.{/shk}{/clr}
+}
+"""
 NAME Big Mac dialog
 
 DLG 9
@@ -2052,10 +2197,10 @@ DLG 9
       - {item "8"} >= 1 ?
         {clr 2}adding the Chicken, {/clr}{
           - {item "6"} >= 1 ?
-            {clr 2}Placing cheese on top, we have a{/clr} {rbw}Chicken Taco!!{/rbw}
+            {clr 2}Placing cheese on top, we have a{/clr} {rbw}Chicken Taco!!{/rbw}{item "5" {{item "5"} - 1}}{item "8" {{item "8"} - 1}}{item "8" {{item "8"} - 1}}{item "9" {{item "9"} + 1}}{blip "5"}
           - else ?
             {clr 2}Wait, something's missing, we need Cheese{/clr}
-        }{item "5" {{item "5"} - 1}}{item "8" {{item "8"} - 1}}{item "6" {{item "6"} - 1}}{item "9" {{item "9"} + 1}}{blip "5"}
+        }
       - else ?
         {clr 2}Wait, something's missing, we need Chicken{/clr}
     }
@@ -2074,11 +2219,11 @@ DLG b
 NAME Cheese Station dialog
 
 DLG c
-{clr 2}I cooked up some beef on the grill, placing it into a bin.{/clr}{item "7" {{item "7"} + 1}}{blip "5"}
+{clr 2}I cooked up some beef, placing it into a bin.{/clr}{item "7" {{item "7"} + 1}}{blip "5"}
 NAME Beef Station dialog
 
 DLG d
-{clr 2}I grilled some chicken on the grill, placing it into a bin.{/clr}{item "8" {{item "8"} + 1}}{blip "5"}
+{clr 2}I grilled some chicken, placing it into a bin.{/clr}{item "8" {{item "8"} + 1}}{blip "5"}
 NAME Chicken Station dialog
 
 DLG e
@@ -2089,10 +2234,10 @@ DLG e
       - {item "7"} >= 1 ?
         {clr 2}adding the Beef, {/clr}{
           - {item "6"} >= 1 ?
-            {clr 2}Placing cheese on top, we have a{/clr} {rbw}Beef Taco!!{/rbw}
+            {clr 2}Placing cheese on top, we have a{/clr} {rbw}Beef Taco!!{/rbw}{item "5" {{item "5"} - 1}}{item "7" {{item "7"} - 1}}{item "6" {{item "6"} - 1}}{item "a" {{item "a"} + 1}}{blip "5"}
           - else ?
             {clr 2}Wait, something's missing, we need Cheese{/clr}
-        }{item "5" {{item "5"} - 1}}{item "7" {{item "7"} - 1}}{item "6" {{item "6"} - 1}}{item "a" {{item "a"} + 1}}{blip "5"}
+        }
       - else ?
         {clr 2}Wait, something's missing, we need Beef{/clr}
     }
@@ -2140,17 +2285,13 @@ DLG j
       - {item "9"} >= 1 ?
         Preciate it {wvy}gorgeous{/wvy}, here's a lil gift for it.{item "b" {{item "b"} + 1}}{item "9" {{item "9"} - 1}}{item "a" {{item "a"} - 1}}{item "c" {{item "c"} + 1}}{blip "4"}{pg}{clr 2}The hell am I gonna use a {rbw}lighter{/rbw} for? Smoking?{/clr}
       - else ?
-        Hey {wvy}hotshot{/wvy}, when am I getting my {rbw}Chicken and Beef Taco?{/rbw}
+        Hey {wvy}hotshot{/wvy}, when will I get my {rbw}Chicken Taco and my Beef Taco?{/rbw}
     }
   - else ?
-    Hey {wvy}hotshot{/wvy}, when am I getting my {rbw}Chicken and Beef Taco?{/rbw}
+    Hey {wvy}hotshot{/wvy}, when will I get my {rbw}Chicken Taco and my Beef Taco?{/rbw}
 }
 """
 NAME Customer 3 dialog
-
-DLG k
-She handed me a lighter, what am I gonna do smoke?
-NAME Lighter dialog
 
 DLG l
 Dude I'm ripping a new one, please get away, I don't need anyone hearing this.{blip "6"}{blip "6"}{blip "6"}
@@ -2161,8 +2302,8 @@ DLG m
 {
   - {item "c"} >= 1 ?
     {clr 2}Maybe I can light this up like a Christmas tree. . .{/clr}{
-      - {item "d"} == 1 ?
-        {pg}{clr 2}Craving opportunity, I place the fireworks into the toilet.{/clr}{pg}{clr 2}Upon explosion, I finally felt secure.{/clr}{pg}{clr 2}In prison.{/clr}   (ENDING 2, Blowing Ass){end}
+      - {item "d"} >= 1 ?
+        {pg}{clr 2}Craving opportunity, I toss the firecrackers into the toilet.{/clr}{pg}{clr 2}Upon explosion, I finally felt secure.{/clr}{pg}{clr 2}In prison.{/clr}   (ENDING 2, Blowing Ass){end}
       - else ?
 
     }
@@ -2171,6 +2312,17 @@ DLG m
 }
 """
 NAME Toilet
+
+DLG n
+ 
+
+DLG o
+I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you 
+NAME You wont leave dialog
+
+DLG p
+Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home 
+NAME I miss you dialog
 
 VAR a
 42
