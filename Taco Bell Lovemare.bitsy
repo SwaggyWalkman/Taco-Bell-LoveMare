@@ -86,6 +86,7 @@ NAME Small Town
 EXT 7,10 0 7,10
 EXT 8,10 0 8,10
 EXT 6,5 5 3,6
+EXT 15,11 6 0,11
 PAL 1
 TUNE 2
 
@@ -144,7 +145,7 @@ ROOM 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,d,a,a,o,0,0,1w,0,0
 0,0,0,0,1s,a,1g,1b,0,0,1g,14,0,0,0,0
-0,0,0,0,1s,1u,0,0,0,0,0,n,1v,0,0,0
+0,0,0,0,1s,1u,0,0,0,0,3u,n,1v,0,0,0
 0,0,0,0,1s,a,a,a,a,a,a,17,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -183,22 +184,24 @@ TUNE 5
 
 ROOM 6
 d,a,a,a,a,a,a,o,0,0,0,0,0,0,0,2k
-e,a,a,a,a,a,a,n,0,0,0,0,0,0,0,2k
+e,a,a,a,a,a,a,n,3v,3v,3v,3v,3v,3v,3v,2k
 e,a,a,a,a,a,a,n,0,0,0,0,0,0,0,2k
 e,a,a,a,a,a,a,n,3t,0,3r,0,0,3r,0,2k
-e,a,a,a,a,a,a,n,0,0,3r,0,0,3r,0,2j
-e,a,a,a,a,a,a,n,0,0,0,0,0,0,0,0
-r,p,s,s,s,s,s,t,0,0,3r,0,0,3r,0,0
-0,0,22,22,22,22,22,22,0,0,3r,0,0,3r,0,0
-0,0,22,22,22,22,22,22,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+e,a,a,a,a,a,a,n,0,0,3r,0,0,3r,0,2k
+e,a,a,a,a,a,a,n,0,0,0,0,0,0,0,2k
+r,p,s,s,s,s,s,t,0,0,3r,0,0,3r,0,2k
+0,0,22,22,22,22,3t,22,0,0,3r,0,0,3r,0,2k
+0,0,22,22,22,22,22,22,0,0,0,0,0,0,0,2k
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2j
+3v,3v,3v,3v,3v,3v,3v,3v,3v,3v,0,0,0,3v,3v,3v
 w,w,w,w,w,w,w,w,w,w,3p,0,3q,w,w,w
 x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
 w,w,w,12,w,12,w,w,w,w,w,w,w,12,w,w
 10,0,0,y,y,y,0,10,0,11,11,y,y,y,y,10
-y,y,y,y,y,y,y,y,y,y,y,y,y,y,y,yy,
+y,y,y,y,y,y,y,y,y,y,y,y,y,y,y,0
 NAME Gas Station
+EXT 1,6 9 1,6
+EXT 0,11 1 15,11
 PAL 4
 
 ROOM 7
@@ -242,6 +245,27 @@ NAME You wont leave
 ITM e 7,13
 ITM f 8,13
 PAL 3
+
+ROOM 9
+d,a,a,a,a,a,a,o,0,0,0,0,0,0,0,2k
+e,0,0,0,o,3d,3h,n,0,0,0,0,0,0,0,2k
+e,m,0,c,n,0,0,n,0,0,0,0,0,0,0,2k
+e,0,0,0,0,0,0,n,3t,0,3r,0,0,3r,0,2k
+e,0,3d,3e,3e,3h,0,n,0,0,3r,0,0,3r,0,2j
+e,0,0,0,0,0,0,n,0,0,0,0,0,0,0,0
+r,p,s,s,s,s,s,t,0,0,3r,0,0,3r,0,0
+0,1s,22,22,22,22,22,22,0,0,3r,0,0,3r,0,0
+0,0,22,22,22,22,22,22,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+w,w,w,w,w,w,w,w,w,w,3p,0,3q,w,w,w
+x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+w,w,w,12,w,12,w,w,w,w,w,w,w,12,w,w
+10,0,0,y,y,y,0,10,0,11,11,y,y,y,y,10
+y,y,y,y,y,y,y,y,y,y,y,y,y,y,y,0
+NAME Gas Station copy 1
+EXT 1,6 6 1,6
+PAL 0
 
 TIL 10
 00000000
@@ -1664,6 +1688,68 @@ TIL 3t
 00111100
 NAME car1
 
+TIL 3u
+00000110
+00000110
+00111110
+00100110
+00100110
+00111110
+00100010
+00100010
+
+TIL 3v
+00000000
+00000000
+11110000
+11111111
+11001111
+01100110
+01100110
+01100110
+WAL true
+
+SPR 10
+00000110
+00000110
+01100010
+00010011
+00011101
+00010001
+00000010
+00000101
+>
+00000000
+00001100
+00001110
+01100010
+00010111
+00011001
+00010001
+00001111
+NAME Car dude
+POS 6 9,3
+
+SPR 11
+10010000
+01010000
+10101000
+00001000
+10000100
+00000000
+10000000
+00000000
+>
+10010000
+00010100
+10101010
+00100000
+11000000
+00000000
+10000000
+00000000
+POS 6 6,8
+
 SPR A
 00011000
 00011100
@@ -2015,6 +2101,90 @@ SPR t
 00000111
 NAME Toilet
 DLG m
+POS 2 13,4
+
+SPR u
+01111110
+10000001
+10011001
+10111101
+11111111
+11111111
+10000001
+01111110
+NAME Kitchen sign
+DLG q
+POS 0 11,0
+
+SPR v
+01111110
+10000101
+10000101
+10000101
+10111101
+10011101
+11111111
+01101101
+NAME Restroom
+DLG r
+POS 0 4,3
+
+SPR w
+01111110
+10000101
+10001101
+10010101
+10011001
+10011001
+11111111
+01101101
+DLG s
+POS 2 14,12
+
+SPR x
+01111110
+10000101
+10000101
+10000101
+10011101
+10100101
+11111111
+01101101
+DLG t
+POS 4 6,6
+
+SPR y
+11111111
+01111110
+01100110
+10011001
+01100110
+10011000
+01100110
+10011001
+POS 9 2,2
+
+SPR z
+00000000
+00000000
+00000000
+00000000
+00011000
+00011000
+00111100
+00100100
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00111100
+00111100
+NAME Gas Keeper
+DLG u
+POS 9 2,1
 
 ITM 0
 00000000
@@ -2381,6 +2551,32 @@ NAME You wont leave dialog
 DLG p
 Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home Welcome Home 
 NAME I miss you dialog
+
+DLG q
+{clr 2}It says Kitchen.{/clr}
+NAME Kitchen sign dialog
+
+DLG r
+{clr 2}It says Restrooms.{/clr}
+NAME Restroom dialog
+
+DLG s
+{clr 2}It says Stock Closet.{/clr}
+NAME sprite w dialog
+
+DLG t
+{clr 2}Ahh. . .The breakroom.{/clr}{pg}{clr 2}What a shitshow.{/clr}
+NAME sprite x dialog
+
+DLG u
+"""
+{cycle
+  - Hey Kyle, please respect my personal space.
+  - Can you back off?
+  -  You know I {wvy}can{/wvy} tend to you if you're in the front.
+}
+"""
+NAME Gas Keeper dialog
 
 VAR a
 42
