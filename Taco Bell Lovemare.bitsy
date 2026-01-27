@@ -186,7 +186,7 @@ ROOM 6
 d,a,a,a,a,a,a,o,0,0,0,0,0,0,0,2k
 e,a,a,a,a,a,a,n,3v,3v,3v,3v,3v,3v,3v,2k
 e,a,a,a,a,a,a,n,0,0,0,0,0,0,0,2k
-e,a,a,a,a,a,a,n,3t,0,3r,0,0,3r,0,2k
+e,a,a,a,a,a,a,n,0,0,3r,0,0,3r,0,2k
 e,a,a,a,a,a,a,n,0,0,3r,0,0,3r,0,2k
 e,a,a,a,a,a,a,n,0,0,0,0,0,0,0,2k
 r,p,s,s,s,s,s,t,0,0,3r,0,0,3r,0,2k
@@ -203,26 +203,6 @@ NAME Gas Station
 EXT 1,6 9 1,6
 EXT 0,11 1 15,11
 PAL 4
-
-ROOM 7
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME Your Home
-PAL 0
 
 ROOM 8
 3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i
@@ -1687,6 +1667,7 @@ TIL 3t
 11000011
 00111100
 NAME car1
+WAL true
 
 TIL 3u
 00000110
@@ -1728,6 +1709,7 @@ SPR 10
 00010001
 00001111
 NAME Car dude
+DLG y
 POS 6 9,3
 
 SPR 11
@@ -1748,7 +1730,34 @@ SPR 11
 00000000
 10000000
 00000000
+DLG v
 POS 6 6,8
+
+SPR 12
+00000000
+00111000
+01100100
+10100110
+10100101
+10000001
+01111111
+01100110
+NAME Car
+DLG w
+POS 1 4,6
+
+SPR 13
+00011000
+00100100
+11000011
+01111110
+01000010
+11111111
+11000011
+00111100
+NAME Car 2
+DLG z
+POS 6 8,3
 
 SPR A
 00011000
@@ -1853,6 +1862,7 @@ SPR d
 00100110
 00100110
 00110010
+NAME Poor dude
 DLG 4
 POS 1 12,10
 
@@ -2162,6 +2172,7 @@ SPR y
 10011000
 01100110
 10011001
+DLG x
 POS 9 2,2
 
 SPR z
@@ -2187,16 +2198,15 @@ DLG u
 POS 9 2,1
 
 ITM 0
+00001000
+00001100
+00001110
+00010000
+01100000
+11100000
+11000000
 00000000
-00000000
-00000000
-00111100
-00000100
-00000000
-00000000
-00000000
-NAME tea
-DLG 1
+NAME Wrench
 
 ITM 1
 00000000
@@ -2345,6 +2355,28 @@ ITM f
 NAME I miss you
 DLG p
 
+ITM g
+00000000
+00000000
+00011110
+00110010
+00100000
+01111110
+01111110
+01111110
+NAME Gas Tank
+
+ITM h
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME Filled Tank
+
 DLG 0
 """
 {
@@ -2355,10 +2387,6 @@ DLG 0
 }
 """
 NAME cat dialog
-
-DLG 1
-You found a nice warm cup of tea
-NAME tea dialog
 
 DLG 2
 A key! {wvy}What does it open?{wvy}
@@ -2377,9 +2405,14 @@ NAME Bob dialog
 
 DLG 4
 """
-{shuffle
-  - Dude help, my dog's been stuck in idle.{pg}Since he smelled Taco Bell, he started standing.
-  - He won't stop standing. . .would a Chicken Chalupa help?
+{
+  - {item "9"} >= 1 ?
+    A Chicken Taco? For my dog? I appreciate it! Have this!{pg}{blip "5"}{item "0" {{item "0"} + 1}}{shk}{/shk}{clr 2}Dude . .What am I gonna do with a {rbw}Wrench?!{/rbw}{/clr}
+  - else ?
+    {cycle
+      - Dude help, my dog's been stuck in idle.{pg}Since he smelled Taco Bell, he started standing.
+      - He won't stop standing. . .would a Chicken Taco help?
+    }
 }
 """
 NAME Poor Dude dialog
@@ -2577,6 +2610,62 @@ DLG u
 }
 """
 NAME Gas Keeper dialog
+
+DLG v
+"""
+{
+  - {item "0"} >= 1 ?
+    Wait. .. You're not my brother, I appreciate the help.{pg}{wvy}{/wvy}{clr 2}No problem! Hey do you by chance have a {rbw}gas tank{/rbw}?{/clr}{pg}No problem the least I can hand you.{pg}{clr 2}I'm one step closer to getting out of here, I just gotta fill it..{/clr}{item "g" {{item "g"} + 1}}{blip "5"}{item "0" {{item "0"} - 1}}
+  - else ?
+    {cycle
+      - HEY HEY?! You back from walking your dog yet? I need a WRENCH!!
+      - Dude where have you been, put the dog in the car and help me.
+    }
+}
+"""
+NAME sprite 11 dialog
+
+DLG w
+"""
+{
+  - {item "h"} == 1 ?
+    {clr 2}After filling my car with gas, I turned this thing on and booked it.{/clr}{pg}{clr 2}Moving from Colonial Drive, I turned into I-4 East.{/clr}{pg}{clr 2}... I have a long drive ahead of me since I live in Daytona.{/clr}{pg}{clr 2}Swerving around cars at 80 mph, I turned in too slow to the left-lane.{/clr}{pg}{clr 2}At least I'll be safe, in death.{/clr}(ENDING 3, I-4 ENDING){end}
+  - else ?
+    {clr 2}I can get out of here fast, But I need gas.{/clr}
+}
+"""
+NAME Car dialog
+
+DLG x
+"""
+{
+  - {item "g"} == 1 ?
+    {
+      - {item "4"} == 1 ?
+        No problem! Here you go dude. Wish you the best.{pg}{clr 2}YES I got{rbw}{wvy} gas{/wvy}{/rbw} for my car! I have get out of here.{/clr}{blip "3"}{item "h" {{item "h"} + 1}}{item "g" {{item "g"} - 1}}{item "4" {{item "4"} - 1}}
+      - else ?
+        I see you got a tank, but unless you have 20 bucks I can't help you Kyle.
+    }
+  - else ?
+    You want me to get you gas? cool, just bring a tank and some cash.
+}
+"""
+NAME sprite y dialog
+
+DLG y
+I think I shot all over my car's window. Now there's gas on my car.
+NAME Car dude dialog
+
+DLG z
+"""
+{
+  - {item "c"} >= 1 ?
+    My intrusive thoughts won. I light this shit up.{pg}The flames rise, oh they rise.{pg}This whole city looks like a California forest fire.{pg}(ENDING 4, ARSONIST ENDING){end}
+  - else ?
+    I wouldn't dare. .would I?
+}
+"""
+NAME Car 2 dialog
 
 VAR a
 42
