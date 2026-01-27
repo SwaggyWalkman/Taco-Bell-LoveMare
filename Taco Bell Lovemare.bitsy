@@ -203,6 +203,7 @@ NAME Gas Station
 EXT 1,6 9 1,6
 EXT 0,11 1 15,11
 PAL 4
+TUNE 2
 
 ROOM 8
 3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i,3i
@@ -246,6 +247,7 @@ y,y,y,y,y,y,y,y,y,y,y,y,y,y,y,0
 NAME Gas Station copy 1
 EXT 1,6 6 1,6
 PAL 0
+TUNE 5
 
 TIL 10
 00000000
